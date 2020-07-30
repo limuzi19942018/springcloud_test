@@ -1,0 +1,34 @@
+##################guns配置####################
+guns:
+  muti-datasource-open: true #是否开启多数据源(true/false)
+##################spring配置############################
+########工作流配置##########
+flowable:
+  check-process-definitions: false #flowable自动部署的设置
+  #database-schema-update: true
+server:
+  port: 8091
+elasticsearch:
+  ip: 127.0.0.1
+  port: 9300
+  cluster.name: elasticsearch
+mongodb:
+  host: 127.0.0.1
+  port: 27017
+  #mongo数据库名
+  database: ceshi_database
+spring:
+  aop:
+    proxy-target-class: true #false为启用jdk默认动态代理,true为cglib动态代理
+  datasource:
+    #url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC&allowMultiQueries=true&autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    #username: root
+    #password: 123456
+    #db-name: test
+    url: jdbc:mysql://49.232.161.254:3306/test?serverTimezone=UTC&allowMultiQueries=true&autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    username: root
+    password: liyong123456
+    db-name: test
+    driver-class-name: com.mysql.jdbc.Driver
+  main:
+      allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册

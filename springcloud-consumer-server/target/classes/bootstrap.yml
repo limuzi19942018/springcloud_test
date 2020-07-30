@@ -1,0 +1,18 @@
+server:
+  port: 8086
+spring:
+  application:
+    name: consumer-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${REGISTER_HOST:test-nacos.cailian.net}
+      config:
+        server-addr: ${REGISTER_HOST:test-nacos.cailian.net}
+        file-extension: yml
+    sentinel:
+      transport:
+        dashboard: ${SENTINEL_DASHBOARD_HOST:localhost}:${SENTINEL_DASHBOARD_PORT:8021}
+#    bus:
+#      trace:
+#        enabled: true
