@@ -1,6 +1,3 @@
-package com.yongli.project;
-
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -10,9 +7,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @Author: yongl
- * @DATE: 2020/7/30 16:33
+ * @DATE: 2020/8/2 19:10
  */
-
 @SpringBootApplication
 //扫描监听器
 @ServletComponentScan
@@ -20,11 +16,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableFeignClients
 @EnableDiscoveryClient
-public class ConsumerServerStart {
+public class ProviderServiceStart {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConsumerServerStart.class, args);
-        System.out.println("启动成功！");
+        SpringApplication.run(ProviderServiceStart.class, args);
+        System.out.println("提供者服务启动成功！");
     }
 
 }

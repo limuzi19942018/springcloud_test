@@ -1,9 +1,13 @@
 package com.yongli.project.controller;
 
+import com.yongli.project.feignProvider.ProviderServiceProvider;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import javax.annotation.Resource;
 
 /**
  * @Author: yongli
@@ -11,13 +15,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 
 @Controller
-@RequestMapping("/consumerTest")
+@RequestMapping("/consumer")
 public class ConsumerTestController {
+
+    @Resource
+    private ProviderServiceProvider providerServiceProvider;
+
+    @Value("${server.port}")
+    private String serverPort;
 
 
     @ResponseBody
     @PostMapping("/testMethod")
-    public Object testMethod(String message){
-        return message;
+    public String testMethod(String message){
+        return providerServiceProvider.testProvider(message);
+    }
+
+    @ResponseBody
+    @PostMapping("/getPort")
+    public String getPort(){
+        return "当前的服务端口号是"+serverPort;
     }
 }

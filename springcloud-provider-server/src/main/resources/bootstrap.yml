@@ -1,8 +1,8 @@
 server:
-  port: 8088
+  port: 8087
 spring:
   application:
-    name: gateway
+    name: provider-server
   cloud:
     nacos:
       discovery:

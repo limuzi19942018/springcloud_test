@@ -2,11 +2,15 @@
 spring:
   cloud:
     gateway:
+      discovery:
+        locator:
+          enabled: true #开启从注册中心动态创建路由的功能，利用服务名称进行路由
       routes:
         - id: consumer-server
-          uri: http://localhost:8086
+          #uri: http://localhost:8086
+          uri: lb://consumer-server
           #order: 0
           predicates:
-            - Path=//consumerTest/**,
+            - Path=/consumer/**,
           #filters:
             #- StripPrefix=1 #过滤掉第一个请求前缀
