@@ -1,0 +1,12 @@
+#server.port: 8082
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: consumer-server
+          uri: http://localhost:8086
+          #order: 0
+          predicates:
+            - Path=//consumerTest/**,
+          #filters:
+            #- StripPrefix=1 #过滤掉第一个请求前缀

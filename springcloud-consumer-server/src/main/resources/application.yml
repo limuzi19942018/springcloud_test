@@ -6,8 +6,8 @@ guns:
 flowable:
   check-process-definitions: false #flowable自动部署的设置
   #database-schema-update: true
-server:
-  port: 8091
+#server:
+  #port: 8091
 elasticsearch:
   ip: 127.0.0.1
   port: 9300

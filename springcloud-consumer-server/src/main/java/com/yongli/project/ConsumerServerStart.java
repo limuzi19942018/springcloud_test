@@ -20,10 +20,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableFeignClients
 @EnableDiscoveryClient
-public class SpringcloudStart {
+public class ConsumerServerStart {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringcloudStart.class, args);
+        SpringApplication.run(ConsumerServerStart.class, args);
         System.out.println("启动成功！");
     }
 
