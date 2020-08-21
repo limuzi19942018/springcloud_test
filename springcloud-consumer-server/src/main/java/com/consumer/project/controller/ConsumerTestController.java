@@ -1,6 +1,6 @@
-package com.yongli.project.controller;
+package com.consumer.project.controller;
 
-import com.yongli.project.feignProvider.ProviderServiceProvider;
+import com.consumer.project.feignProvider.ProviderServiceProvider;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,6 +30,7 @@ public class ConsumerTestController {
     public String testMethod(String message){
         return providerServiceProvider.testProvider(message);
     }
+
 
     @ResponseBody
     @PostMapping("/getPort")

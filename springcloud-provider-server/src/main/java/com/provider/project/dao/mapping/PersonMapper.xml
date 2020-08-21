@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.provider.project.dao.PersonMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.provider.project.model.Person">
+        <id column="id" property="id" />
+        <result column="lastName" property="lastName" />
+        <result column="firstName" property="firstName" />
+        <result column="address" property="address" />
+        <result column="city" property="city" />
+        <result column="createTime" property="createTime" />
+    </resultMap>
+
+</mapper>

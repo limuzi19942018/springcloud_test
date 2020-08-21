@@ -1,4 +1,4 @@
-package com.yongli.project.feignProvider;
+package com.consumer.project.feignProvider;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,4 +21,13 @@ public interface ProviderServiceProvider {
      */
     @PostMapping("/provider/testProvider")
     String testProvider(@RequestParam(value = "message") String message);
+
+
+    /**
+     * 测试两个微服务之间的seata调用
+     * @param city 参数
+     * @return 返回一个字符串
+     */
+    @PostMapping("/person/insertVoByParams")
+    String testSeata(@RequestParam(value = "city")String city);
 }
