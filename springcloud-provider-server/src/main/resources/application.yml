@@ -6,21 +6,21 @@ guns:
 flowable:
   check-process-definitions: false #flowable自动部署的设置
   #database-schema-update: true
-#server:
-  #port: 8091
-elasticsearch:
-  ip: 127.0.0.1
-  port: 9300
-  cluster.name: elasticsearch
+server:
+  port: 8091
+#elasticsearch:
+  #ip: 127.0.0.1
+  #port: 9300
+  #cluster.name: elasticsearch
 #mongodb:
   #host: 127.0.0.1
   #port: 27017
   #mongo数据库名
   #database: ceshi_database
-seata:
-  enabled: true
-  application-id: provider-server
-  tx-service-group: my_test_tx_group
+#seata:
+  #enabled: true
+  #application-id: provider-server
+  #tx-service-group: my_test_tx_group
   #enable-auto-data-source-proxy: true
   #data-source-proxy-mode: AT
   #enableAutoDataSourceProxy: false
@@ -45,7 +45,8 @@ spring:
   aop:
     proxy-target-class: true #false为启用jdk默认动态代理,true为cglib动态代理
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC&allowMultiQueries=true&autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    #url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC&allowMultiQueries=true&autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/test?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password: 123456
     db-name: test
@@ -53,7 +54,7 @@ spring:
     #username: root
     #password: liyong123456
     #db-name: test
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   main:
       allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
 mybatis-plus:
@@ -71,3 +72,4 @@ mybatis-plus:
      callSettersOnNulls: true #Mybatis查询数据库空字段不返回
      lazyLoadingEnabled: true #延时加载的开关
      multipleResultSetsEnabled: true #开启的话，延时加载一个属性时会加载该对象全部属性，否则按需加载属性
+

@@ -5,11 +5,9 @@ import com.provider.project.model.Person;
 import com.provider.project.dao.PersonMapper;
 import com.provider.project.service.IPersonService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import io.seata.spring.annotation.GlobalTransactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -27,7 +25,6 @@ public class PersonServiceImpl extends ServiceImpl<PersonMapper, Person> impleme
     @Resource
     private ConsumerProvider consumerProvider;
 
-    @GlobalTransactional
     @Override
     public Boolean insertPersonVo(String address) {
         Person person = new Person();
@@ -41,7 +38,6 @@ public class PersonServiceImpl extends ServiceImpl<PersonMapper, Person> impleme
 
     }
 
-    @GlobalTransactional(name ="test" ,rollbackFor = Exception.class)
     @Override
     public String insertVoByParams(String city) {
         Person person = new Person();

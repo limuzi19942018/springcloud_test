@@ -1,4 +1,4 @@
-import io.seata.spring.annotation.datasource.EnableAutoDataSourceProxy;
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,14 +20,14 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableFeignClients
 @EnableDiscoveryClient
-@EnableAutoDataSourceProxy
 @ComponentScan(basePackageClasses = ProviderServiceStart.class)
 @MapperScan(basePackages = {"com.provider.project.dao"})
+@Slf4j
 public class ProviderServiceStart {
 
     public static void main(String[] args) {
         SpringApplication.run(ProviderServiceStart.class, args);
-        System.out.println("提供者服务启动成功！");
+        log.info("提供者服务启动成功");
     }
 
 }

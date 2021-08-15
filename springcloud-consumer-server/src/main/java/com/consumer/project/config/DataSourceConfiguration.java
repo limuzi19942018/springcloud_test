@@ -1,7 +1,5 @@
 package com.consumer.project.config;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import io.seata.spring.annotation.GlobalTransactionScanner;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.transaction.SpringManagedTransactionFactory;
@@ -10,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import io.seata.rm.datasource.DataSourceProxy;
 import javax.sql.DataSource;
 
 
@@ -41,9 +38,9 @@ public class DataSourceConfiguration {
         return sqlSessionFactoryBean.getObject();
     }*/
 
-    @Bean
+   /* @Bean
     public GlobalTransactionScanner globalTransactionScanner(){
         return new GlobalTransactionScanner("consumer-service","my_test_tx_group");
-    }
+    }*/
 
 }

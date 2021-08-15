@@ -1,7 +1,5 @@
 package com.provider.project.config;
 
-import com.alibaba.druid.pool.DruidDataSource;
-import io.seata.spring.annotation.GlobalTransactionScanner;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.transaction.SpringManagedTransactionFactory;
@@ -9,7 +7,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import io.seata.rm.datasource.DataSourceProxy;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
@@ -19,7 +16,7 @@ import javax.sql.DataSource;
  * @DATE: 2020/8/9 18:57
  */
 
-@Configuration
+//@Configuration
 public class SeataConfiguration {
 
   /*  @Bean
@@ -43,8 +40,8 @@ public class SeataConfiguration {
         return sqlSessionFactoryBean.getObject();
     }*/
 
-    @Bean
+    /*@Bean
     public GlobalTransactionScanner globalTransactionScanner(){
         return new GlobalTransactionScanner("provider-server","my_test_tx_group");
-    }
+    }*/
 }

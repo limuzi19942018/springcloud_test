@@ -5,7 +5,6 @@ import com.consumer.project.model.CityName;
 import com.consumer.project.dao.CityNameMapper;
 import com.consumer.project.service.ICityNameService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
-import io.seata.spring.annotation.GlobalTransactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -30,7 +29,7 @@ public class CityNameServiceImpl extends ServiceImpl<CityNameMapper, CityName> i
 
     private final static Logger LOGGER = LoggerFactory.getLogger(CityNameServiceImpl.class);
 
-    @GlobalTransactional(name ="test",rollbackFor = Exception.class)
+    //@GlobalTransactional(name ="test",rollbackFor = Exception.class)
     @Override
     public String insertVo(String country,String city) {
         CityName cityName = new CityName();
@@ -46,7 +45,7 @@ public class CityNameServiceImpl extends ServiceImpl<CityNameMapper, CityName> i
         return s;
     }
 
-    @GlobalTransactional
+    //@GlobalTransactional
     @Override
     public void insertVoByParams(String city) {
         CityName cityName = new CityName();

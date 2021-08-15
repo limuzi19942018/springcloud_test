@@ -1,6 +1,7 @@
 package com.consumer.project;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -24,11 +25,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableDiscoveryClient
 @ComponentScan(basePackageClasses = ConsumerServiceStart.class)
 @MapperScan(basePackages = {"com.consumer.project.dao"})
+@Slf4j
 public class ConsumerServiceStart {
 
     public static void main(String[] args) {
         SpringApplication.run(ConsumerServiceStart.class, args);
-        System.out.println("启动成功！");
+        log.info("启动成功！");
     }
 
 }

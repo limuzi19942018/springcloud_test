@@ -8,19 +8,11 @@ flowable:
   #database-schema-update: true
 #server:
   #port: 8091
-elasticsearch:
-  ip: 127.0.0.1
-  port: 9300
-  cluster.name: elasticsearch
 #mongodb:
   #host: 127.0.0.1
   #port: 27017
   #mongo数据库名
   #database: ceshi_database
-seata:
-  enabled: true
-  application-id: consumer-service
-  tx-service-group: my_test_tx_group
   #enable-auto-data-source-proxy: true
   #data-source-proxy-mode: AT
   #config:
@@ -50,15 +42,15 @@ spring:
   aop:
     proxy-target-class: true #false为启用jdk默认动态代理,true为cglib动态代理
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/yongli_database?serverTimezone=UTC&allowMultiQueries=true&autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/test2?autoReconnect=true&useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
     username: root
     password: 123456
-    db-name: yongli_database
+    db-name: test2
     #url: jdbc:mysql://49.232.161.254:3306/test?serverTimezone=UTC&allowMultiQueries=true&autoReconnect=true&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
     #username: root
     #password: liyong123456
     #db-name: test
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   main:
       allow-bean-definition-overriding: true #当遇到同样名字的时候，是否允许覆盖注册
 mybatis-plus:
