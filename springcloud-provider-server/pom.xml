@@ -199,7 +199,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.11</version>
+            <version>8.0.16</version>
         </dependency>
         <!--利用generator生成文件的依赖 模板引擎 -->
         <dependency>
