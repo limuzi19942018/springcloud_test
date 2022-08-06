@@ -21,8 +21,8 @@ public class ConsumerTestController {
     @Resource
     private ProviderServiceProvider providerServiceProvider;
 
-    @Value("${server.port}")
-    private String serverPort;
+   /* @Value("${server.port}")
+    private String serverPort;*/
 
 
     @ResponseBody
@@ -32,9 +32,9 @@ public class ConsumerTestController {
     }
 
 
-    @ResponseBody
+   /* @ResponseBody
     @PostMapping("/getPort")
     public String getPort(){
         return "当前的服务端口号是"+serverPort;
-    }
+    }*/
 }

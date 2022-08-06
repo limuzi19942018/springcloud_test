@@ -2,20 +2,20 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springcloud-consumer-server" />
+        <module name="springcloud-zuul-server" />
         <module name="springcloud-gateway-server" />
+        <module name="springcloud-eureka-server" />
         <module name="springcloud-provider-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springcloud" target="1.8" />
-      <module name="springcloud-consumer-server" target="1.8" />
-      <module name="springcloud-gateway-server" target="1.8" />
-      <module name="springcloud-provider-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
