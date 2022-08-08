@@ -1,14 +1,14 @@
 server:
   port: 8087
+  servlet:
+    context-path: /provider #接口前缀
 spring:
   application:
     name: provider-server
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin@localhost:8761/eureka/
+      #defaultZone: http://admin:admin@localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
-#    bus:
-#      trace:
-#        enabled: true

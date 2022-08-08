@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yongli</groupId>
+    <groupId>com.yongli</groupId>-
     <artifactId>springcloud-gateway-server</artifactId>
     <dependencies>
         <dependency>

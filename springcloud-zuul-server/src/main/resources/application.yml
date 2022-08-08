@@ -6,7 +6,19 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://admin:admin@localhost:8761/eureka/
+      #defaultZone: http://admin:admin@localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
   instance:
     prefer-ip-address: true
+# 配置路由规则 (方式1：自定义指定微服务的访问路径；配置zuul.routes.指定的微服务的serviceId = 指定的路径即可，如下)
+zuul:
+  routes:
+    consumer-server: /consumer/**  #消费者的服务名及路径
+    provider-server: /provider/**  #提供者的服务名及路径
+
+
+logging:
+  level:
+    com.netflix: debug
+
 

@@ -42,10 +42,10 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <!--配置Eureka server的认证-->
-        <dependency>
+   <!--     <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

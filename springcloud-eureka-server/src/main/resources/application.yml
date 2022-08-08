@@ -19,3 +19,6 @@ eureka:
   serviceUrl:
     #defaultZone: http://admin:admin@localhost:8761/eureka/
     defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    com.netflix: debug

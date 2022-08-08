@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00ce7495-41e8-4c64-95a7-50ebdc53ac53" name="Default" comment="zuul+eureka的代码提交">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-consumer-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-consumer-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-consumer-server/src/main/java/com/consumer/project/controller/ConsumerTestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-consumer-server/src/main/java/com/consumer/project/controller/ConsumerTestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-consumer-server/src/main/resources/application-eureka.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-consumer-server/src/main/resources/application-eureka.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-eureka-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-gateway-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-gateway-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-provider-server/src/main/java/com/provider/project/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-provider-server/src/main/java/com/provider/project/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-provider-server/src/main/resources/application-eureka.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-provider-server/src/main/resources/application-eureka.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-zuul-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-zuul-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springcloud-zuul-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/springcloud-zuul-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -614,9 +623,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.ZuulServerApplication" />
-        <item itemvalue="Application.com.provider.project.ProviderServiceStart" />
-        <item itemvalue="Application.ConsumerServiceStart" />
         <item itemvalue="Application.EurekaServerApplication" />
+        <item itemvalue="Application.ConsumerServiceStart" />
+        <item itemvalue="Application.com.provider.project.ProviderServiceStart" />
       </list>
     </recent_temporary>
   </component>
@@ -657,7 +666,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659788461688</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="zuul+eureka的代码提交">
+      <created>1659788714674</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1659788714674</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -717,6 +733,42 @@
     <MESSAGE value="配置网关并测试" />
     <MESSAGE value="zuul+eureka的代码提交" />
     <option name="LAST_COMMIT_MESSAGE" value="zuul+eureka的代码提交" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0.jar!/com/netflix/loadbalancer/LoadBalancerContext.class</url>
+          <line>309</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE.jar!/org/springframework/web/servlet/handler/AbstractUrlHandlerMapping.class</url>
+          <line>85</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE-sources.jar!/org/springframework/web/servlet/handler/AbstractUrlHandlerMapping.java</url>
+          <line>121</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java</url>
+          <line>1228</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE-sources.jar!/org/springframework/web/servlet/handler/AbstractUrlHandlerMapping.java</url>
+          <line>264</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/netflix/ribbon/ribbon-loadbalancer/2.3.0/ribbon-loadbalancer-2.3.0-sources.jar!/com/netflix/loadbalancer/LoadBalancerContext.java</url>
+          <line>572</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/springcloud-consumer-server/src/main/java/com/yongli/project/controller/ConsumerTestController.java">

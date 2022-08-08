@@ -1,11 +1,10 @@
 package com.consumer.project.controller;
 
 import com.consumer.project.feignProvider.ProviderServiceProvider;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -16,13 +15,28 @@ import javax.annotation.Resource;
 
 @Controller
 @RequestMapping("/consumer")
+@Slf4j
 public class ConsumerTestController {
 
     @Resource
     private ProviderServiceProvider providerServiceProvider;
 
-   /* @Value("${server.port}")
-    private String serverPort;*/
+    @Value("${server.port}")
+    private String serverPort;
+
+    @Value("${spring.application.name}")
+    private String currentServiceName;
+
+
+    /**
+     * 获取当前服务名称
+     * @return 返回当前服务名称
+     */
+    @ResponseBody
+    @GetMapping("/getServiceName")
+    public String getServiceName(){
+        return currentServiceName;
+    }
 
 
     @ResponseBody
@@ -32,9 +46,11 @@ public class ConsumerTestController {
     }
 
 
-   /* @ResponseBody
-    @PostMapping("/getPort")
+    @ResponseBody
+    @GetMapping("/getPort")
     public String getPort(){
         return "当前的服务端口号是"+serverPort;
-    }*/
+    }
+
+
 }

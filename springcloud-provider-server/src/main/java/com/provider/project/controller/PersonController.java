@@ -3,6 +3,8 @@ package com.provider.project.controller;
 
 import com.provider.project.service.IPersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -18,11 +20,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @since 2020-08-09
  */
 @Controller
-@RequestMapping("/person")
 public class PersonController {
 
     @Autowired
     private IPersonService iPersonService;
+
+    @Value("${spring.application.name}")
+    private String currentServiceName;
 
     @PostMapping("/insertPersonVo")
     @ResponseBody
@@ -36,6 +40,17 @@ public class PersonController {
     @ResponseBody
     public String insertVoByParams(String city){
         return  iPersonService.insertVoByParams(city);
+    }
+
+
+    /**
+     * 获取当前服务名称
+     * @return 返回当前服务名称
+     */
+    @ResponseBody
+    @GetMapping("/getServiceName")
+    public String getServiceName(){
+        return currentServiceName;
     }
 }
 
