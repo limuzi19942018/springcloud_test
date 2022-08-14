@@ -11,6 +11,8 @@
     <file url="file://$PROJECT_DIR$/springcloud-gateway-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-gateway-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-provider-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-provider-server-copy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springcloud-provider-server-copy/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-provider-server/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-provider-server/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springcloud-zuul-server/src/main/java" charset="UTF-8" />

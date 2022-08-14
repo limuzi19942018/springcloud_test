@@ -16,6 +16,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springcloud" target="1.8" />
+      <module name="springcloud-provider-server (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

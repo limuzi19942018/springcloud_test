@@ -1,0 +1,24 @@
+server:
+  port: 8761
+spring:
+  application:
+    name: eureka-server
+  #security:
+    #basic:
+      #enabled: true #开启基于http basic的认证
+    #user:
+      #name: admin  #配置登录的账号是admin
+      #password: admin #配置登录的密码是admin
+eureka:
+  client:
+  #表示是否将自己注册到Eureka Server，默认为true,由于当前应用就是Eureka Server ，故而设为false( 换句话说禁止自己当作服务注册)
+  registerWithEureka: false
+  #表示是否从Eureka Server获取注册信息，默认为true.因为这是一个单节点的Eureka Server，不需要同步其他的Eureka Server的数据，故而设置为 false
+  fetchRegistry: false
+  #设置为Eureka Server的交互地址，查询服务和注册服务都需要这个地址。默认是http://localhost:8671/eureka/，多个地址用都逗号隔开
+  serviceUrl:
+    #defaultZone: http://admin:admin@localhost:8761/eureka/
+    defaultZone: http://localhost:8761/eureka/
+logging:
+  level:
+    com.netflix: debug

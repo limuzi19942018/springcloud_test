@@ -1,5 +1,7 @@
 package com.consumer.project.feignProvider;
 
+import com.consumer.project.fallback.FeignClientFallback;
+import com.consumer.project.fallback.FeignClientFallbackFactory;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -9,7 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @DATE: 2020/8/2 18:55
  */
 
-@FeignClient(name = "provider-server")
+@FeignClient(name = "provider-server",/*fallback = FeignClientFallback.class*/
+        fallbackFactory = FeignClientFallbackFactory.class)
 public interface ProviderServiceProvider {
 
 
@@ -19,7 +22,7 @@ public interface ProviderServiceProvider {
      * @param message 测试字符串
      * @return
      */
-    @PostMapping("/provider/testProvider")
+    @PostMapping("/provider/provider/testProvider")
     String testProvider(@RequestParam(value = "message") String message);
 
 

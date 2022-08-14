@@ -261,6 +261,7 @@
 
     <modules>
         <module>springcloud-provider-server</module>
+        <module>springcloud-provider-server-copy</module>
         <module>springcloud-consumer-server</module>
         <module>springcloud-gateway-server</module>
         <module>springcloud-eureka-server</module>
